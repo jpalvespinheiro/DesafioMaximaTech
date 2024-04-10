@@ -1,0 +1,37 @@
+﻿@page "/"
+@using Adm.DataModelage.Entities
+@model IEnumerable<Produto>;
+
+<h2> Listagem de Produtos </h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>   
+            <th>Código </th>
+            <th>Descrição</th>
+            <th>Preço</th>    
+            <th>Status</th>    
+            <th>Ações</th>    
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var produto in Html.ViewData.Model)
+        {
+            <tr>
+                <td>@produto.ID</td>
+                <td>@produto.Codigo</td>
+                <td>@produto.Descricao</td>
+                <td>@produto.Preco</td>
+                <td>@(produto.Status ? "Ativo" : "Inativo")</td>
+                <td>
+                    <button class="btn btn-primary" onclick="window.location.href='@Url.ActionLink("index", "Cadastro")?codigo=@produto.Codigo'"> Editar </button>
+                    <button class="btn btn-danger" onclick="window.location.href='@Url.ActionLink("delete")?codigo=@produto.Codigo'"> Excluir </button>
+                </td>
+            </tr>
+        }
+
+        
+    </tbody>
+</table>

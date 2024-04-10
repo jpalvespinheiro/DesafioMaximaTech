@@ -1,0 +1,61 @@
+@APIntegrator_HostAddress = http://localhost:5154
+
+GET {{APIntegrator_HostAddress}}/api/departamento_all
+Accept: application/json
+###
+
+DELETE {{APIntegrator_HostAddress}}/api/departamento_delete/010
+Accept: application/json
+###
+
+POST {{APIntegrator_HostAddress}}/api/departamento_create
+Accept: application/json
+
+{
+    "ID": "141380d1-9298-498b-b907-757053c83a7c",
+    "Codigo": "010",
+    "Descricao": "Bebidas"
+}
+
+###
+
+PUT {{APIntegrator_HostAddress}}/api/departamento_update/010
+Accept: application/json
+
+{
+    "ID": "141380d1-9298-498b-b907-757053c83a7c",
+    "Codigo": "010",
+    "Descricao": "Bebidas"
+}
+
+###
+
+POST {{APIntegrator_HostAddress}}/api/produto_create
+Accept: application/json
+
+{
+    "ID": "69c6a45f-1f41-4b98-8642-ced3cbb42b25",
+    "Codigo": "TST009-9",
+    "Descricao": "O produto representativo de teste",
+    "Preco": 3568.10,
+    "Status": true
+
+}
+
+###
+
+GET {{APIntegrator_HostAddress}}/api/produto_all
+Accept: application/json
+
+###
+
+DELETE {{APIntegrator_HostAddress}}/api/produto_delete/TST001-1
+Accept: application/json
+
+###
+
+    
+POST {{APIntegrator_HostAddress}}/api/relacionar-produto-departamento_create?codigoproduto=TST001-1&codigodepartamento=010
+Accept: application/json
+
+###

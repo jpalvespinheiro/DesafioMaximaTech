@@ -1,0 +1,49 @@
+﻿namespace Adm.Views.Home
+
+
+.navbar {
+    background-color: #007bff;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    .table th, .table td {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table th {
+        background-color: #f2f2f2;
+        text-align: left;
+    }
+
+
+.btn-primary, .btn-danger {
+    padding: 6px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}
